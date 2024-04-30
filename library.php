@@ -128,7 +128,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<script>alert('$message');</script>";
     } elseif (isset($_POST['return'])) {
         $id = $_POST['book_id'];
-        $lateFee = $perpustakaan->kembalikanBuku($id, 0); // Anda dapat mengganti ID pengguna dengan ID yang sesuai
+        $lateFee = $perpustakaan->kembalikanBuku($id, 0);
         if (is_numeric($lateFee)) {
             echo "<script>alert('Buku berhasil dikembalikan. Denda keterlambatan: $' + $lateFee);</script>";
         } else {
